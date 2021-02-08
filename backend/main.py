@@ -77,7 +77,7 @@ def predictionsParkinsons(filename):
 
     
     #Make Prediction and return keyword in json format 
-    with open('model_7_949.sav', 'rb') as file:    # Load from file
+    with open('ML_diagnosis_model.sav', 'rb') as file:    # Load from file
         model = pickle.load(file)
 
     predictions = model.predict([final_values])
