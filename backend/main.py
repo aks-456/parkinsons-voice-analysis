@@ -2,8 +2,6 @@ import parselmouth
 from parselmouth.praat import call, run_file
 import pandas as pd
 import numpy as np
-#from sklearn.decomposition import PCA
-#from sklearn.preprocessing import StandardScaler
 import pickle
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
@@ -32,14 +30,7 @@ def predictionsParkinsons(filename):
 
     #Config
     config = {
-        "apiKey": "AIzaSyDgBMjnTdeCm8dKX_I5u_sAKbc1TDYyEnY",
-        "authDomain" : "ews-database-6cc5e.firebaseapp.com",
-        "databaseURL" : "https://ews-database-6cc5e.firebaseio.com",
-        "projectId" : "ews-database-6cc5e",
-        "storageBucket" : "ews-database-6cc5e.appspot.com",
-        "messagingSenderId" : "455612944775",
-        "appId" : "1:455612944775:web:31a2c6e8ed949ffdd38322",
-        "measurementId" : "G-6F10B06V2V"
+        # Add Firebase Database Credentials
     }
 
     firebase = pyrebase.initialize_app(config)
@@ -102,7 +93,7 @@ def measurePitch(voiceID, f0min, f0max, unit):
     meanF0 = call(pitch, "Get mean", 0, 0, unit) # get mean pitch
     minF0 = call(pitch, "Get minimum", 0, 0, "hertz", "Parabolic") # get min pitch
     maxF0 = call(pitch, "Get maximum", 0, 0, "hertz", "Parabolic")  # get max pitch
-    stdevF0 = call(pitch, "Get standard deviation", 0 ,0, unit) # get standard deviation
+    stdevF0 = call(pitch, "Get standard deviation", 0 ,0, unit) # get standard deviation... and so on
     harmonicity = call(sound, "To Harmonicity (cc)", 0.01, 75, 0.1, 1.0)
     hnr = call(harmonicity, "Get mean", 0, 0)
     pointProcess = call(sound, "To PointProcess (periodic, cc)", f0min, f0max)
