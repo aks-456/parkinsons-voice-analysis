@@ -1,4 +1,3 @@
-//webkitURL is deprecated but nevertheless
 URL = window.URL || window.webkitURL;
 
 var gumStream; 						//stream from getUserMedia()
@@ -119,12 +118,14 @@ function stopRecording() {
 
 	//create the wav blob and pass it on to createDownloadLink
 	exportRec = rec.exportWAV(parkinsonDiagnose);
+	
 }
 
 function parkinsonDiagnose(blob) {
 
-	
+
 var filename = "parkinsons_voice_analysis"
+
 
 	
 try {
@@ -133,6 +134,7 @@ try {
 
 	// Create a storage reference from our storage service
 	var ref = storage.ref();
+	
 
 	var file = blob;
 
