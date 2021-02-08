@@ -119,29 +119,12 @@ function stopRecording() {
 
 	//create the wav blob and pass it on to createDownloadLink
 	exportRec = rec.exportWAV(parkinsonDiagnose);
-	//rec.exportWAV(createDownloadLink);
-	//rec.exportWAV(parkinsonDiagnose);
 }
 
 function parkinsonDiagnose(blob) {
 
-	//var url1 = URL.createObjectURL(blob);
-//video.srcObject = stream
-	//var url = URL.createObjectURL(blob);
-
-//name of .wav file to use during upload and download (without extendion)
-//var filename = new Date().toISOString();
-
+	
 var filename = "parkinsons_voice_analysis"
-
-//add controls to the <audio> element
-//au.controls = true;
-//au.src = url;
-
-//save to disk link
-//ink.href = rec;
-//link.download = filename+".wav"; //download forces the browser to donwload the file using the  filename
-//link.innerHTML = "Save to disk";
 
 	
 try {
@@ -150,11 +133,6 @@ try {
 
 	// Create a storage reference from our storage service
 	var ref = storage.ref();
-	
-	/*var file = blob; // use the Blob or File API
-	ref.child().put(file).then(function(snapshot) {
-	console.log('Uploaded a blob or file!');
-	});*/
 
 	var file = blob;
 
