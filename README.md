@@ -2,7 +2,7 @@
 An attempt to classify Parkinson's Disease based on the extraction of vocal features from patient recordings. 
 <hr>
 
-<b>Parkinson's Disease</b>
+<b style = "font-size:14px">Parkinson's Disease</b>
 
 Parkinson’s Disease (PD) is progressive nervous system disorder that leads to shaking, stiffness, and difficulty with walking, balance, and coordination. The disease may also affect one’s ability to walk and talk. People may also experience mental and behavioural changes, sleep problems, depression, memory difficulties and fatigue. 
 
