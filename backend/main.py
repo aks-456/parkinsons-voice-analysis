@@ -2,9 +2,11 @@ import parselmouth
 from parselmouth.praat import call, run_file
 import pandas as pd
 import numpy as np
+#from sklearn.decomposition import PCA
+#from sklearn.preprocessing import StandardScaler
 import pickle
 from flask import Flask, request, jsonify, render_template, redirect, url_for
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 import tempfile
 import os
 import glob
@@ -30,7 +32,14 @@ def predictionsParkinsons(filename):
 
     #Config
     config = {
-        #Enter Firebase DB Credentials
+        "apiKey": "AIzaSyDgBMjnTdeCm8dKX_I5u_sAKbc1TDYyEnY",
+        "authDomain" : "ews-database-6cc5e.firebaseapp.com",
+        "databaseURL" : "https://ews-database-6cc5e.firebaseio.com",
+        "projectId" : "ews-database-6cc5e",
+        "storageBucket" : "ews-database-6cc5e.appspot.com",
+        "messagingSenderId" : "455612944775",
+        "appId" : "1:455612944775:web:31a2c6e8ed949ffdd38322",
+        "measurementId" : "G-6F10B06V2V"
     }
 
     firebase = pyrebase.initialize_app(config)
