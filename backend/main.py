@@ -5,9 +5,7 @@ import numpy as np
 import pickle
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
-import tempfile
 import os
-import glob
 import requests
 from requests.auth import HTTPBasicAuth
 import pyrebase
