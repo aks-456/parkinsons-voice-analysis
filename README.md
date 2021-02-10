@@ -41,7 +41,7 @@ The most accurate one being the RFC model, with an accuracy of 94.9 % as mention
 
 ## Frontend
 
-Along with the model, I implemented a user interface (UI) to perform a diagnosis. It records the "patient's" sustained pronounciation of the vowel a, (which according to: 'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. BioMedical Engineering OnLine 2007, 6:23 (26 June 2007) is the most effective in obtaining vocal features). The UI is written in html and I modified an existing version of a wav file recorder, which belongs to [octavn](https://github.com/octavn) and can be found here: https://github.com/addpipe/simple-recorderjs-demo. The frontend code can be found to in the folder labelled: "frontend". 
+Along with the model, I implemented a user interface (UI) to perform a diagnosis. It records the user's sustained pronounciation of the vowel a, (which according to: 'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. BioMedical Engineering OnLine 2007, 6:23 (26 June 2007) is the most effective in obtaining vocal features). The UI is written in html and I modified an existing version of a wav file recorder, which belongs to [octavn](https://github.com/octavn) and can be found here: https://github.com/addpipe/simple-recorderjs-demo. The frontend code can be found to in the folder labelled: "frontend". 
 Note: The wav file recorder **ONLY** works on **Chrome** and **Firefox** browsers.
 
 ## Backend
@@ -56,5 +56,5 @@ This program has numerous practical applications as it can be used to diagnose P
 
 ## Notes
 
-This is **NOT** an accurate solution to PD Diagnosis. I would highly appreciate any suggestions or feedback as I was only recently introduced to ML and Artificial Intelligence. In addition, please ignore any informality (i.e informally citing sources). 
+This is **NOT** an accurate solution to PD Diagnosis. I would highly appreciate any suggestions or feedback as I was only recently introduced to ML and Artificial Intelligence. In addition, please ignore any informality (i.e informally citing sources). Thank you!
 
