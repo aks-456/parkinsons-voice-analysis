@@ -1,6 +1,5 @@
 import parselmouth
 from parselmouth.praat import call, run_file
-import pandas as pd
 import numpy as np
 import pickle
 from flask import Flask, request, jsonify, render_template, redirect, url_for
