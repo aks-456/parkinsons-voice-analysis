@@ -1,6 +1,8 @@
 # Parkinson's-Voice-Analysis
 An attempt to classify Parkinson's Disease based on the extraction of vocal features from patient recordings. 
 
+Please read the following. 
+
 <hr>
 
 ## Parkinson's Disease
