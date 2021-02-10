@@ -15,9 +15,36 @@ Diagnosing PD is difficult and often very tedious, since doctors diagnose other 
 
 ## PD Diagnosis From Vocal Features
 
-Biomedical Voice Measurements (Vocal features) 
+PD affects Biomedical Voice Measurements (Vocal features) in patients. Vocal features include:
 
-https://archive.ics.uci.edu/ml/datasets/parkinsons
+MDVP:Fo(Hz) - Average vocal fundamental frequency 
+MDVP:Fhi(Hz) - Maximum vocal fundamental frequency 
+MDVP:Flo(Hz) - Minimum vocal fundamental frequency 
+MDVP:Jitter(%),MDVP:Jitter(Abs),MDVP:RAP,MDVP:PPQ,Jitter:DDP - Several measures of variation in fundamental frequency 
+MDVP:Shimmer,MDVP:Shimmer(dB),Shimmer:APQ3,Shimmer:APQ5,MDVP:APQ,Shimmer:DDA - Several measures of variation in amplitude 
+NHR,HNR - Two measures of ratio of noise to tonal components in the voice 
+status - Health status of the subject (one) - Parkinson's, (zero) - healthy 
+RPDE,D2 - Two nonlinear dynamical complexity measures 
+DFA - Signal fractal scaling exponent 
+spread1,spread2,PPE - Three nonlinear measures of fundamental frequency variation 
+
+In order to classify PD, Machine Learning (ML) algorithms can be used on the UCI ML Repository: Parkinson's Disease Dataset, found here [https://archive.ics.uci.edu/ml/datasets/parkinsons] (https://archive.ics.uci.edu/ml/datasets/parkinsons)
+
+I used a number of different approaches to classify the data, which was arranged in terms of patients with PD and patients without PD, as well as their respective vocal features extracted from voice recordings. I separated the data into a 70-30 train-test split, and recieved the following accuracies for each approach:
+
+Decision Tree Classifier - 89.4 %
+K-nearest Neighbour - 83.2 %
+Random Forest Classifier (RFC) - 94.9 %
+Bagging Classifier - 89.9 %
+Gradient Boosting - 89.8 %
+
+The most accurate one being the RFC model, with an accuracy of 94.9 % as mentioned above. More specifically, of the 59 sets of data used for testing, the RFC model accurately predicted 56. The model is labelled by the file: 'model.sav'. 
+
+## Frontend
+<hr>
+
+## Backend
+<hr>
 
 
 Notes For Self (Delete):
