@@ -46,24 +46,15 @@ Note: The wav file recorder **ONLY** works on **Chrome** and **Firefox** browser
 
 ## Backend
 
-The frontent provides a basic user experience and it is accompanied with backend code, found in the "backend" folder. In the backend, I used flask to accept the wav file which is sent by the frontend, and I route it to a function which extracts vocal features from the recording. The vocal feature extraction is carried out through the 
+The frontent provides a basic user experience and it is accompanied with backend code, found in the "backend" folder. In the backend, I redirect the html frontend to the flask server, and I route it to a function which extracts vocal features from the recording. The vocal feature extraction is carried out through the Parselmouth Python library, which can be found here: https://parselmouth.readthedocs.io/en/stable/. The parselmouth library is used to port Praat, a software for voice analytics, into python. With this package, I extract vocal features for each recording and feed them into the ML model (model.sav). This produces an output and displays either a 1, indicating the user has Parkinson's disease, or a 0, indicating the user does not. This is contained in the file: "backend/main.py". 
 
+In addition to the flask server I also use pyrebase to store and retrieve the audio recording of the patient. The frontend sends the audio recording to firebase, and the backend flask server retrieves it each time a user has recorded their voice. Currently I only expect there to be one recording at a time, and therefore did not bother to add functionality to change the name of the recording upon execution of the program. The only change required to make is the Firebase database credentials which are unique for each developer, which must be replaced by the comments indicating to do so on "backend/main.py" and "frontend/index.html". 
 
-Notes For Self (Delete):
-- Credit the person who made the recorder -- Github
-- Only works on Google Chrome and Firefox (Webpage stuff)
-- Add link to audio repository
-- Add link to Parselmouth Library (+ Credit)
-- List python libraries necessary
-- Discuss Firebase
+## Practical Applications
 
-Structure for Document (Delete):
-- Introduce PD
-- Discuss approach (random forest) -- vocal features
-- Discuss results -- high accuracy but ineffective in real life (misdiagnosis)
-- Discuss resources (i.e audio repository + library)
-- Discuss Frontend (Credit Github Link)
-- Discuss Backend
-- Conclusion -- Improvements are welcome
+This program has numerous practical applications as it can be used to diagnose PD efficiently in hospitals as well as homes (assuming an appropriate UI is setup). Unfortunately, despite having a high accuracy, the model turned out to be inneficient upon real testing. I tested out my ML model by asking 20 people within the range of 16-20 years old to test out the UI. While it is practically impossible for someone between the age of 16-20 to positively be diagnosed for PD, the model returned a 1, for 14 out of 20 people. Apart from the limited number of people who tested it, it is possible that the parselmouth library is innacurate in extracting vocal features, or that the dataset used for the model contained limited samples. Currently, I am investigating the innacuracy behind the RFC model and looking to improve its capabilities. 
 
+## Notes
+
+This is **NOT** an accurate solution to PD Diagnosis. I would highly appreciate any suggestions or feedback as I was only recently introduced to ML and Artificial Intelligence. In addition, please ignore any informality (i.e informally citing sources). 
 
