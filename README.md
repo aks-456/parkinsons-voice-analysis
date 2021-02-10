@@ -56,5 +56,5 @@ This program has numerous practical applications as it can be used to diagnose P
 
 ## Notes
 
-This is **NOT** an accurate solution to PD Diagnosis. I would highly appreciate any suggestions or feedback as I was only recently introduced to ML and Artificial Intelligence. In addition, please ignore any informality (i.e informally citing sources). Thank you!
+This is **NOT** an accurate solution to PD Diagnosis. I would highly appreciate any suggestions or feedback as I was only recently introduced to ML and Artificial Intelligence. In addition, please ignore any informality (i.e informal links and sources). Thank you!
 
