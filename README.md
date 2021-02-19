@@ -1,7 +1,7 @@
 # Parkinson's-Voice-Analysis
 An attempt to classify Parkinson's Disease based on the extraction of vocal features from patient recordings. 
 
-Please read the following. 
+**Note:** This is just a project for fun.  
 
 <hr>
 
@@ -58,5 +58,5 @@ This program has numerous practical applications as it can be used to diagnose P
 
 ## Notes
 
-This is **NOT** an accurate solution to PD Diagnosis. I would highly appreciate any suggestions or feedback as I was only recently introduced to ML and Artificial Intelligence. In addition, please ignore any informality (i.e informal links and sources). Thank you!
+This is **NOT** an accurate solution to PD Diagnosis. I would highly appreciate any suggestions or feedback as I was only recently introduced to ML and Artificial Intelligence.
 
