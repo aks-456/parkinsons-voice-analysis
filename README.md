@@ -13,7 +13,6 @@ PD can occur in both men and women, however it is more prevalent amongst men. A 
 
 Diagnosing PD is difficult and often very tedious, since doctors diagnose other diseases with similar symptoms first. If a patient tests negative for all other diseases, only then can doctors diagnose the patient with PD. 
 
-
 ## Parkinson's Diseases Diagnosis From Vocal Features
 
 PD affects Biomedical Voice Measurements (Vocal features) in patients. Vocal features include:
