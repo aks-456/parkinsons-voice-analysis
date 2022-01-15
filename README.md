@@ -12,9 +12,9 @@ Parkinson's Disease (PD) affects Biomedical Voice Measurements (Vocal features) 
 * DFA - Signal fractal scaling exponent 
 * spread1,spread2,PPE - Three nonlinear measures of fundamental frequency variation 
 
-In order to classify PD, the UCI ML Repository can be used for training and testing data: Parkinson's Disease Dataset, found here [https://archive.ics.uci.edu/ml/datasets/parkinsons] (https://archive.ics.uci.edu/ml/datasets/parkinsons)
+In order to classify PD, the UCI ML Repository can be used for training and testing data: Parkinson's Disease Dataset, found here [https://archive.ics.uci.edu/ml/datasets/parkinsons]
 
-I used a number of different approaches to classify the data, which was arranged in terms of patients with PD and patients without PD, as well as their respective vocal features extracted from voice recordings. I separated the data into a 70-30 train-test split, and recieved the following accuracies for each approach:
+I used a number of different approaches to classify the data, which was arranged in terms of patients with PD and patients without PD, as well as their respective vocal features extracted from voice recordings. I separated the data into a 80-20 train-test split, and recieved the following accuracies for each approach:
 
 * Decision Tree Classifier - 89.4 % 
 * K-nearest Neighbour - 83.2 % 
@@ -26,8 +26,8 @@ The most accurate one being the RFC model, with an accuracy of 94.9 % as mention
 
 ## Frontend
 
-Along with the model, I implemented a user interface to perform a diagnosis. It records the user's sustained pronounciation of the vowel a, (which according to: 'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. BioMedical Engineering OnLine 2007, 6:23 (26 June 2007) is the most effective in obtaining vocal features). The UI is written in html and I modified an existing version of a wav file recorder, which belongs to [octavn](https://github.com/octavn) and can be found here: https://github.com/addpipe/simple-recorderjs-demo. The frontend code can be found to in the folder labelled: "frontend". 
-Note: The wav file recorder **ONLY** works on **Chrome** and **Firefox** browsers.
+Along with the model, I implemented a user interface to perform a diagnosis. It records the user's sustained pronounciation of the vowel a, (which according to: 'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. BioMedical Engineering OnLine 2007, 6:23 (26 June 2007) is the most effective in obtaining vocal features for PD Diagnosis). The UI is written in html and I modified an existing version of a wav file recorder, which belongs to [octavn](https://github.com/octavn) and can be found here: https://github.com/addpipe/simple-recorderjs-demo. The frontend code can be found to in the folder labelled: "frontend". 
+Note: The wav file recorder only works on **Chrome** and **Firefox** browsers.
 
 ## Backend
 
